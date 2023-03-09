@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Acceuil {{parent()}}{% endblock %}
+
+{% block body %}
+    {% include 'partials/_carousel.html.twig' %}
+
+    <h1 class="text-center">Langages & framework</h1>
+
+{% for content in contents %}
+
+<div class="container">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{content.image}}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{content.title}}</h5>
+            <p class="card-text">{{content.text}}
+            </p>
+            <a href="#" class="btn btn-primary">Voir cet article</a>
+        </div>
+    </div>
+</div>
+
+{% endfor %}
+{% endblock %}

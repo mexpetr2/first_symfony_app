@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact {{parent()}}{% endblock %}
+
+{% block body %}
+
+    <h1 class="text-center">CONTACT</h1>
+
+    {% for contact in contacts %}
+
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{contact.logo}}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{contact.text}}</h5>
+        </div>
+    </div>
+
+    {% endfor %}
+
+
+{% endblock %}
